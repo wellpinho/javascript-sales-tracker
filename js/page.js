@@ -2,14 +2,20 @@
 let ctx = document.getElementById('montlySales').getContext('2d')
 let pieCtx = document.getElementById('deptSales').getContext('2d')
 
+let montlyLabels = Array.of('Oct', 'Nov', 'Dec')
+let montlySales = Array.of(12, 9, 3)
+
+let deptLabels = Array.of('Oct', 'Nov', 'Dec')
+let dptSales = Array.of(12, 9, 3)
+
 // bar chart
 let montlySalesChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Oct', 'Nov', 'Dec'],
+    labels: montlyLabels,
     datasets: [{
       label: '# of Sales',
-      data: [12, 19, 3],
+      data: montlySales,
       backgroundColor: [
         'rgba(238, 184, 104, 1)',
         'rgba(75, 166, 223, 1)',
@@ -33,10 +39,10 @@ let montlySalesChart = new Chart(ctx, {
 let deptSalesChart = new Chart(pieCtx, {
   type: 'pie',
   data: {
-    labels: ['Oct', 'Nov', 'Dec'],
+    labels: deptLabels,
     datasets: [{
       label: '# of Sales',
-      data: [12, 19, 3],
+      data: dptSales,
       backgroundColor: [
         'rgba(238, 184, 104, 1)',
         'rgba(75, 166, 223, 1)',
