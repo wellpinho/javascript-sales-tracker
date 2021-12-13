@@ -28,3 +28,30 @@ let montlySalesChart = new Chart(ctx, {
     }
   }
 })
+
+// circle chart
+let deptSalesChart = new Chart(pieCtx, {
+  type: 'pie',
+  data: {
+    labels: ['Oct', 'Nov', 'Dec'],
+    datasets: [{
+      label: '# of Sales',
+      data: [12, 19, 3],
+      backgroundColor: [
+        'rgba(238, 184, 104, 1)',
+        'rgba(75, 166, 223, 1)',
+        'rgba(239, 118, 122, 1)',
+      ],
+      bordarWidth: 0
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+})
